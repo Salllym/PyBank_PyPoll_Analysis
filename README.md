@@ -1,7 +1,7 @@
-# Unit 3 Homework: Python
+# Python-Challenge
 
 
-## PyBank Instructions
+## PyBank
 
 In this challenge, you are tasked with creating a Python script to analyze the financial records of your company. You will give a set of financial data called [budget_data.csv](PyBank/Resources/budget_data.csv). The dataset is composed of two columns: "Date" and "Profit/Losses". (Thankfully, your company has rather lax standards for accounting, so the records are simple.)
 
@@ -32,7 +32,7 @@ Your analysis should look similar to the following:
 In addition, your final script should both print the analysis to the terminal and export a text file with the results.
 
 
-## PyPoll Instructions
+## PyPoll
 
 In this challenge, you are tasked with helping a small, rural town modernize its vote counting process.
 
