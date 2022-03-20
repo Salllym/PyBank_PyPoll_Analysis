@@ -64,17 +64,28 @@ with open(csvpath, newline='') as csvfile:
     else:
         winner = "Raymon_Anthony_Doane"
 
-        #Print Statements
+    #Print Statements
+    print(f"Election Results")
+    print(f"-----------------------------------")
+    print(f"Total Votes: {total_votes}"
+    print(f"-----------------------------------")
+    print(f"Charles_Casper_Stockham_percent: {Charles_Casper_Stockham_percent_percent}% ({Charles_Casper_Stockham_percent_votes})")
+    print(f"Diana_DeGette: {Diana_DeGette_percent}% ({Diana_DeGette_votes})")
+    print(f"Raymon_Anthony_Doane: {Raymon_Anthony_Doane_percent}% ({Raymon_Anthony_Doane_votes})")
+    print(f"-----------------------------------")
+    print(f"Winner: {winner}")
+    print(f"-----------------------------------")
 
-print(f"Election Results")
-print(f"-----------------------------------")
-print(f"Total Votes: {total_votes}"
-print(f"-----------------------------------")
-print(f"Charles_Casper_Stockham_percent: {Charles_Casper_Stockham_percent_percent}% ({Charles_Casper_Stockham_percent_votes})")
-print(f"Diana_DeGette: {Diana_DeGette_percent}% ({Diana_DeGette_votes})")
-print(f"Raymon_Anthony_Doane: {Raymon_Anthony_Doane_percent}% ({Raymon_Anthony_Doane_votes})")
-print(f"-----------------------------------")
-print(f"Winner: {winner}")
-print(f"-----------------------------------")
-
-
+    # output to a text file
+    file = open("output.txt","w")
+    file.write("Election Results" + "\n")
+    file.write(f"-----------------------------------" + "\n")
+    file.write(f"Total Votes: {total_votes}" + "\n")
+    file.write(f"-----------------------------------") + "\n")
+    file.write(f"Charles_Casper_Stockham_percent: {Charles_Casper_Stockham_percent_percent}% ({Charles_Casper_Stockham_percent_votes})") + "\n")
+    file.write(f"Diana_DeGette: {Diana_DeGette_percent}% ({Diana_DeGette_votes})") + "\n")
+    file.write(f"Raymon_Anthony_Doane: {Raymon_Anthony_Doane_percent}% ({Raymon_Anthony_Doane_votes})") + "\n")
+    file.write(f"-----------------------------------") + "\n")
+    file.write(f"Winner: {winner}") + "\n")
+    file.write(f"-----------------------------------" + "\n")
+    file.close()
