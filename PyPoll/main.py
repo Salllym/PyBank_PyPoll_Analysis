@@ -1,15 +1,16 @@
-#import poll
+# import poll
 import os
 import csv
 
-#working directory
+# working directory
 csvpath=os.path.join('Resources','election_data.csv')
 with open(csvpath, newline='') as csvfile:
     csvreader = csv.reader(csvfile, delimiter=',')
-    #print(csvreader)
+   
+    # print(csvreader)
     csv_header = next(csvreader)
     
-    #Declaring variables
+    # Declaring variables
     votes = []
     county = []
     candidates = []
@@ -26,11 +27,11 @@ with open(csvpath, newline='') as csvfile:
         county.append(row[1])
         candidates.append(row[2])
 
-    #VOTE COUNT
+    # VOTE COUNT
     total_votes = (len(votes))
-    #print(total_votes)
+    # print(total_votes)
 
-    #Votes by Person
+    # Votes by Person
     for candidate in candidates:
         if candidate == "Charles Casper Stockham":
             Charles_Casper_Stockham.append(candidates)
@@ -49,7 +50,7 @@ with open(csvpath, newline='') as csvfile:
     # print(Raymon_Anthony_Doane_votes)
     
     
-    #Percentages
+    # Percentages
     Charles_Casper_Stockham_percent = round(((Charles_Casper_Stockham_votes / total_votes) * 100), 3)
     Diana_DeGette_percent = round(((Diana_DeGette_votes / total_votes) * 100), 3)
     Raymon_Anthony_Doane_percent = round(((Raymon_Anthony_Doane_votes / total_votes) * 100), 3)
@@ -58,7 +59,7 @@ with open(csvpath, newline='') as csvfile:
     # print(Raymon_Anthony_Doane_percent)
 
     
-    #Winner 
+    # Winner 
     if Charles_Casper_Stockham_percent > max(Diana_DeGette_percent, Raymon_Anthony_Doane_percent):
         winner = "Charles_Casper_Stockham"
     elif Diana_DeGette_percent > max(Charles_Casper_Stockham_percent, Raymon_Anthony_Doane_percent):
@@ -66,19 +67,8 @@ with open(csvpath, newline='') as csvfile:
     else:
         winner = "Raymon_Anthony_Doane"
 
-    #Print Statements
-    print(f'Election Results')
-    print(f'-----------------------------------')
-    print(f'Total Votes: {total_votes}')
-    print(f'-----------------------------------')
-    print(f'Charles_Casper_Stockham_percent: {Charles_Casper_Stockham_percent}% ({Charles_Casper_Stockham_votes})')
-    print(f'Diana_DeGette: {Diana_DeGette_percent}% ({Diana_DeGette_votes})')
-    print(f'Raymon_Anthony_Doane: {Raymon_Anthony_Doane_percent}% ({Raymon_Anthony_Doane_votes})')
-    print(f'-----------------------------------')
-    print(f'Winner: {winner}')
-    print(f'-----------------------------------')
 
- #Print Statements
+    # Print Statements
     print(f'''Election Results
 -----------------------------------
 Total Votes: {total_votes}
@@ -91,30 +81,8 @@ Winner: {winner}
 -----------------------------------''')
 
 
-    # output to a text file
+    # Output to a text file
     file = open("output.txt","w")
-    file.write("Election Results" + "\n")
-    file.write(f'-----------------------------------\n')
-    file.write(f'Total Votes: {total_votes}\n')
-    file.write(f'-----------------------------------\n')
-    file.write(f'Charles_Casper_Stockham_percent: {Charles_Casper_Stockham_percent}% ({Charles_Casper_Stockham_votes})\n')
-    file.write(f'Diana_DeGette: {Diana_DeGette_percent}% ({Diana_DeGette_votes})\n')
-    file.write(f'Raymon_Anthony_Doane: {Raymon_Anthony_Doane_percent}% ({Raymon_Anthony_Doane_votes})\n')
-    file.write(f'-----------------------------------\n')
-    file.write(f'Winner: {winner}\n')
-    file.write(f'-----------------------------------\n')
-
-    file.write(f'''Election Results\n
------------------------------------\n
-Total Votes: {total_votes}\n
------------------------------------\n
-Charles_Casper_Stockham_percent: {Charles_Casper_Stockham_percent}% ({Charles_Casper_Stockham_votes})\n
-Diana_DeGette: {Diana_DeGette_percent}% ({Diana_DeGette_votes})\n
-Raymon_Anthony_Doane: {Raymon_Anthony_Doane_percent}% ({Raymon_Anthony_Doane_votes})\n
------------------------------------\n
-Winner: {winner}\n
------------------------------------\n''')
-
     file.write(f'''Election Results
 -----------------------------------
 Total Votes: {total_votes}
