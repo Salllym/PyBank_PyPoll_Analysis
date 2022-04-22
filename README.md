@@ -1,11 +1,8 @@
-# Python-Challenge
+# PyBank
 
+Created a Python script to analyze the financial dataset called [budget_data.csv](PyBank/Resources/budget_data.csv), which is composed of two columns: "Date" and "Profit/Losses". 
 
-## PyBank
-
-In this challenge, you are tasked with creating a Python script to analyze the financial records of your company. You will give a set of financial data called [budget_data.csv](PyBank/Resources/budget_data.csv). The dataset is composed of two columns: "Date" and "Profit/Losses". (Thankfully, your company has rather lax standards for accounting, so the records are simple.)
-
-Your task is to create a Python script that analyzes the records to calculate each of the following:
+Each of the following were calculated: 
 
 * The total number of months included in the dataset
 
@@ -17,7 +14,7 @@ Your task is to create a Python script that analyzes the records to calculate ea
 
 * The greatest decrease in profits (date and amount) over the entire period
 
-Your analysis should look similar to the following:
+My analysis:
 
   ```text
   Financial Analysis
@@ -29,14 +26,12 @@ Your analysis should look similar to the following:
   Greatest Decrease in Profits: Feb-14 ($-1825558)
   ```
 
-In addition, your final script should both print the analysis to the terminal and export a text file with the results.
 
+# PyPoll
 
-## PyPoll
+Created a Python script to analyze the poll dataset called [election_data.csv](PyPoll/Resources/election_data.csv), which is composed of three columns: "Voter ID", "County", and "Candidate".
 
-In this challenge, you are tasked with helping a small, rural town modernize its vote counting process.
-
-You will be given a set of poll data called [election_data.csv](PyPoll/Resources/election_data.csv). The dataset is composed of three columns: "Voter ID", "County", and "Candidate". Your task is to create a Python script that analyzes the votes and calculates each of the following:
+Each of the following were calculated: 
 
 * The total number of votes cast
 
@@ -48,7 +43,7 @@ You will be given a set of poll data called [election_data.csv](PyPoll/Resources
 
 * The winner of the election based on popular vote.
 
-Your analysis should look similar to the following:
+My analysis:
 
 
   ```text
@@ -64,4 +59,3 @@ Your analysis should look similar to the following:
   -------------------------
   ```
 
-In addition, your final script should both print the analysis to the terminal and export a text file with the results.
